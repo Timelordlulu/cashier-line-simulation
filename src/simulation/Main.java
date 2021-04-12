@@ -88,9 +88,9 @@ public class Main {
             targetRegister.addCustomer(c);
         }
         // After all the customers are in the cashier, calculate the remaining checkout time.
-        int maxCheckedOutTime = 0;
+        double maxCheckedOutTime = 0.0;
         for (Register r: registers) {
-            int checkedOutTime = 0;
+            double checkedOutTime = 0;
             for (Customer c: r.getCustomerLine()) {
                 checkedOutTime += c.getItemCnt() * r.getProcessSpeed();
             }
@@ -98,6 +98,7 @@ public class Main {
                 maxCheckedOutTime = checkedOutTime;
             }
         }
-        return currentTime + maxCheckedOutTime;
+        // Since every customer arrives at an integer minute, the maxCheckoutTime is also an integer.
+        return currentTime + (int) maxCheckedOutTime;
     }
 }
