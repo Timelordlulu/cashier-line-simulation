@@ -3,6 +3,9 @@ package simulation;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Class for customers.
+ */
 public class Customer implements Comparable<Customer> {
     private double itemCnt;
     private int arriveTime;
@@ -13,10 +16,6 @@ public class Customer implements Comparable<Customer> {
         this.type = type;
         this.arriveTime = arriveTime;
         this.itemCnt = itemCnt;
-    }
-
-    public Type getType() {
-        return type;
     }
 
     public int getArriveTime() {

@@ -2,6 +2,9 @@ package simulation;
 
 import java.util.LinkedList;
 
+/**
+ * The class for Register. Parent class of TrainRegister.
+ */
 public class Register implements Comparable<Register> {
     protected int registerNum;
     protected int customerNum;
@@ -25,10 +28,6 @@ public class Register implements Comparable<Register> {
 
     public double getProcessSpeed() {
         return processSpeed;
-    }
-
-    public int getRegisterNum() {
-        return registerNum;
     }
 
     public void addCustomer(Customer c) {

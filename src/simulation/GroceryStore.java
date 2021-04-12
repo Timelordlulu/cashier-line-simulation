@@ -3,6 +3,10 @@ package simulation;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
+/**
+ * The Simulation class for the Grocery Store.
+ * It has a queue of customers representing all coming customers and a list of registers.
+ */
 public class GroceryStore {
     private static PriorityQueue<Customer> customers = new PriorityQueue<Customer>();
     private static ArrayList<Register> registers = new ArrayList<Register>();
